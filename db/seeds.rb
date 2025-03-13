@@ -7,3 +7,10 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Thing.create!([
+  { title: "Ice Cream", price: 511, completed: true },
+  { title: "Gas", price: 373, completed: true },
+  { title: "Toy", price: 926, completed: false },
+  { title: "Pizza", price: 1548, completed: false },
+])
