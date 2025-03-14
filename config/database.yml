@@ -19,7 +19,6 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
-
 development:
   <<: *default
   database: liatrio_modernize_api_development
@@ -81,7 +80,7 @@ test:
 production:
   primary: &primary_production
     <<: *default
-    database: liatrio_modernize_api_production
+    database: <%= ENV['DATABASE_URL'] %>
     username: liatrio_modernize_api
     password: <%= ENV["LIATRIO_MODERNIZE_API_DATABASE_PASSWORD"] %>
   cache:
