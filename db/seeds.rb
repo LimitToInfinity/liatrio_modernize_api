@@ -12,5 +12,5 @@ Thing.create!([
   { title: "Ice Cream", price: 511, completed: true },
   { title: "Gas", price: 373, completed: true },
   { title: "Toy", price: 926, completed: false },
-  { title: "Pizza", price: 1548, completed: false },
+  { title: "Pizza", price: 1548, completed: false }
 ])
