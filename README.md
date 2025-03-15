@@ -1,90 +1,81 @@
 # Liatrio Modernize API
 
-This is the Liatrio Modernize API, a Ruby on Rails application.
+This is the Liatrio Modernize API, a Ruby on Rails application designed to provide a modernized API service.
 
 ## Prerequisites
 
-- Ruby version: [Specify the version, e.g., 2.7.2]
-- Rails version: [Specify the version, e.g., 6.1.4]
-- PostgreSQL: [Specify the version, e.g., 12]
+- Ruby version: 3.4.2
+- Rails version: 8.0.2
+- PostgreSQL: 12 or higher
 
-## System Dependencies
+## Installing PostgreSQL on MacOS
 
-- Docker
-- Docker Compose
+Using Homebrew and Ruby:
 
-## Configuration
+1. Install Homebrew if you haven't already:
 
-1. Copy the example environment variables file and edit as needed:
+```sh
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
-   ```sh
-   cp .env.example .env
-   ```
+2. Install PostgreSQL using Homebrew:
 
-2. Set up the database configuration in `config/database.yml`.
+```sh
+   brew install postgresql
+```
+
+3. Start PostgreSQL service:
+
+```sh
+   brew services start postgresql
+```
+
+4. Install the `pg` gem:
+
+```sh
+   gem install pg
+```
 
 ## Database Setup
 
 1. Create the database:
 
-   ```sh
+```sh
    rails db:create
-   ```
+```
 
 2. Run database migrations:
 
-   ```sh
+```sh
    rails db:migrate
-   ```
+```
 
 3. Seed the database with initial data:
-   ```sh
+
+```sh
    rails db:seed
-   ```
+```
 
 ## Running the Application
 
 To start the application, run:
 
 ```sh
-rails server
+   rails server # or, rails s
+```
 
-Or, if using Docker:
+## Running the Test Suite
 
-docker-compose up
-
-Running the Test Suite
 To run the test suite, execute:
 
-rails test
-
-Or, if using RSpec:
-
-rspec
-
-Services
-Job Queues: [Specify the job queue system, e.g., Sidekiq]
-Cache Server: [Specify the cache server, e.g., Redis]
-Search Engine: [Specify the search engine, e.g., Elasticsearch]
-
-Deployment Instructions
-Build the Docker image:
-
-docker build -t liatrio_modernize_api .
-
-Push the Docker image to your container registry:
-
-docker push [your-registry]/liatrio_modernize_api
-
-Deploy using your preferred method (e.g., Kubernetes, AWS ECS, etc.).
-
-Additional Information
-API Documentation
-Contributing Guidelines
-Code of Conduct
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-
-This should provide a comprehensive README for your API app.
+```sh
+   rails test
 ```
+
+## Deployment
+
+1. App deployed using Heroku
+
+## Additional Information
+
+- **License:** This project is licensed under the MIT License - see the LICENSE file for details.
