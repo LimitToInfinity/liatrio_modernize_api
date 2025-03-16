@@ -44,8 +44,8 @@ To set up Git hooks locally, follow these steps:
 2. Run the following commands from the root of the project:
 
 ```sh
-   chmod +x .git/hooks/pre-commit
-   chmod +x .git/hooks/pre-push
+chmod +x .git/hooks/pre-commit
+chmod +x .git/hooks/pre-push
 ```
 
 ## Database Setup
