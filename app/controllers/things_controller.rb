@@ -11,7 +11,7 @@ class ThingsController < ApplicationController
         completed: thing.completed
       }
     end
-    
+
     render json: {
       things_stored: things_data.to_json,
       timestamp: Time.now.to_i
@@ -49,12 +49,12 @@ class ThingsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    # Use callbacks to share common setup or constraints between actions
     def set_thing
       @thing = Thing.find(params.expect(:id))
     end
 
-    # Only allow a list of trusted parameters through.
+    # Only allow a list of trusted parameters through
     def thing_params
       params.expect(thing: [ :title, :price, :completed ])
     end
