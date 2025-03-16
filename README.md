@@ -36,6 +36,18 @@ brew services start postgresql
 gem install pg
 ```
 
+## Git Hooks (local)
+
+To set up Git hooks locally, follow these steps:
+
+1. Move the files from .github/hooks into your local repo .git/hooks folder.
+2. Run the following commands from the root of the project:
+
+```sh
+   chmod +x .git/hooks/pre-commit
+   chmod +x .git/hooks/pre-push
+```
+
 ## Database Setup
 
 1. Create the database:
