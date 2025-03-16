@@ -15,25 +15,25 @@ Using Homebrew and Ruby:
 1. Install Homebrew if you haven't already:
 
 ```sh
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 2. Install PostgreSQL using Homebrew:
 
 ```sh
-   brew install postgresql
+brew install postgresql
 ```
 
 3. Start PostgreSQL service:
 
 ```sh
-   brew services start postgresql
+brew services start postgresql
 ```
 
 4. Install the `pg` gem:
 
 ```sh
-   gem install pg
+gem install pg
 ```
 
 ## Database Setup
@@ -41,19 +41,19 @@ Using Homebrew and Ruby:
 1. Create the database:
 
 ```sh
-   rails db:create
+rails db:create
 ```
 
 2. Run database migrations:
 
 ```sh
-   rails db:migrate
+rails db:migrate
 ```
 
 3. Seed the database with initial data:
 
 ```sh
-   rails db:seed
+rails db:seed
 ```
 
 ## Running the Application
@@ -61,7 +61,7 @@ Using Homebrew and Ruby:
 To start the application, run:
 
 ```sh
-   rails server # or, rails s
+rails server # or, rails s
 ```
 
 ## Running the Test Suite
@@ -69,7 +69,15 @@ To start the application, run:
 To run the test suite, execute:
 
 ```sh
-   rails test
+rails test
+```
+
+## Running the Linter
+
+To run the RuboCop linter, execute:
+
+```sh
+bundle exec rake lint:rubocop
 ```
 
 ## Deployment
