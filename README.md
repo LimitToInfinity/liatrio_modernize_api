@@ -81,7 +81,7 @@ rails server # or, rails s
 To run the test suite, execute:
 
 ```sh
-rails test
+rails test # or, rails t
 ```
 
 ## Running the Linter
