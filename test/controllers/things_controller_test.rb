@@ -7,7 +7,7 @@ class ThingsControllerTest < ActionDispatch::IntegrationTest
 
   test "should get index" do
     get things_url, as: :json
-    assert_response :failure
+    assert_response :success
   end
 
   test "should create thing" do
