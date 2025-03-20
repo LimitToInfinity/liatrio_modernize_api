@@ -46,3 +46,13 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 end
+
+group :development do
+  # Speed profiling for your Rails app
+  gem "rack-mini-profiler"
+
+  gem "memory_profiler"
+
+  gem "flamegraph"
+  gem "stackprof"
+end
